@@ -1,5 +1,5 @@
-# own_Research
 <img width="1926" height="646" alt="Shot Dia172048" src="https://github.com/user-attachments/assets/47ea71df-7900-44cd-b3c7-4cd8865c4bf9" />
+
 # OWN Research
 
 **Drop in a research paper. Get a structured breakdown, executive summary, mind map, AI tutor, and exportable presentation — in seconds.**
