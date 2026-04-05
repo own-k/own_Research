@@ -2,71 +2,67 @@
 
 # OWN Research
 
-**Drop in a research paper. Get a structured breakdown, executive summary, mind map, AI tutor, and exportable presentation — in seconds.**
+Research paper → structured PowerPoint presentation. Upload a paper, get a presentation-ready breakdown with problem statement, methodology, key findings, and implications. Includes executive summaries, mind maps, contextual Q&A, and export to PPTX/PDF.
 
-https://github.com/user-attachments/assets/b3c453c6-6a7b-4ddb-9cf1-8184ca7bcaa9
-
----
-
-## What It Does
-
-OWN Research takes academic papers and turns them into structured, digestible formats — so you spend less time reading and more time understanding.
-
-- **Structured Breakdown** — Automatically extracts Problem, Methodology, Key Findings, and Implications from any research paper
-- **Executive Summary** — Get a concise overview of the entire paper in seconds
-- **Mind Maps** — Visual maps showing how concepts in the paper connect
-- **AI Tutor** — Ask questions and get answers pulled directly from the paper
-- **Export** — Generate a PowerPoint presentation or PDF from the structured output, ready to share or present
+[<!-- Demo: https://youtu.be/YOUR_VIDEO_ID -->](https://github.com/user-attachments/assets/b3c453c6-6a7b-4ddb-9cf1-8184ca7bcaa9)
 
 ---
 
-## Why I Built This
+## Features
 
-Research papers are dense. Students at my school struggled to extract what actually matters from 20+ page papers. I wanted a tool that does the heavy lifting — breaking papers down into the structure that matters — without losing the substance.
+- **Structured extraction** — Parses research papers into a defined schema: Problem, Methodology, Key Findings, Implications
+- **Presentation generation** — Produces slide decks from extracted structure, ready to present or share
+- **Executive summary** — Concise document-level summary generated from full paper content
+- **Mind map generation** — Visual mapping of concepts, relationships, and findings
+- **Contextual Q&A** — AI tutor that answers questions grounded in the source document — responses cite directly from the paper
+- **Export** — Output as PowerPoint (.pptx) or PDF
+
+---
+
+## Architecture
+
+```
+PDF Upload
+    ↓
+Document Parser (text + structure extraction)
+    ↓
+┌───────────────────────────────────────────────┐
+│  Structured Breakdown                         │
+│  (Problem → Methodology → Findings → Impact)  │
+└───────────────────────────────────────────────┘
+    ↓                ↓                ↓
+Executive        Mind Map        Slide Deck
+Summary          Generator       Generator
+                                     ↓
+                                PPTX / PDF Export
+    ↓
+Vector Index → Contextual Q&A
+```
 
 ---
 
 ## Tech Stack
 
-- TypeScript / React
-- RAG (Retrieval-Augmented Generation) pipeline
-- PDF parsing and extraction
-- PowerPoint and PDF generation
-- AI-powered Q&A from document context
+| Layer | Technology |
+|-------|-----------|
+| Frontend | TypeScript, React |
+| Document Processing | PDF parsing, section classification |
+| AI Pipeline | RAG (Retrieval-Augmented Generation), embedding-based retrieval |
+| Export Engine | PPTX and PDF generation from structured output |
+| Q&A | Context-grounded responses with source attribution |
 
 ---
 
-## How It Works
+## Motivation
 
-```
-Upload Paper → Parse PDF → Extract Structure → Generate Summary + Mind Map
-                                                         ↓
-                                              AI Tutor (ask anything)
-                                                         ↓
-                                              Export as PPTX or PDF
-```
-
----
-
-## Screenshots
-
-<!-- Add screenshots here -->
-<!-- ![Upload](./screenshots/upload.png) -->
-<!-- ![Structured Breakdown](./screenshots/breakdown.png) -->
-<!-- ![Mind Map](./screenshots/mindmap.png) -->
-<!-- ![AI Tutor](./screenshots/tutor.png) -->
-<!-- ![Export](./screenshots/export.png) -->
+Research papers are dense by design. Extracting the core structure — what problem was solved, how, and what it means — takes significant time. OWN Research automates that extraction and produces presentation-ready output, reducing hours of manual work to seconds.
 
 ---
 
 ## Status
 
-Active development. Used by students at Millat Umidi School, Tashkent.
+In production. Active user base at Millat Umidi School, Tashkent.
 
 ---
 
-Built by [Komron Keldiyorov](https://github.com/own-k)
-
-
-
-
+[Komron Keldiyorov](https://github.com/YOUR_USERNAME)
