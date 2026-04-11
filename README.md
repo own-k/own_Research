@@ -65,4 +65,4 @@ In production. Active user base at Millat Umidi School, Tashkent.
 
 ---
 
-[Komron Keldiyorov](https://github.com/YOUR_USERNAME)
+[Komron Keldiyorov](https://github.com/own-k)
